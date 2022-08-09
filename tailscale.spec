@@ -134,6 +134,7 @@ BuildRequires:  golang(golang.zx2c4.com/wireguard/tun/tuntest)
 
 %prep
 %goprep
+rm -rf internal/tooldeps
 
 %build
 for cmd in cmd/* ; do
