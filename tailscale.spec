@@ -6,7 +6,7 @@
 %global forgeurl        https://github.com/tailscale/tailscale
 Version:                1.28.0
 
-%gometa -f
+%gometa
 
 %global goname tailscale
 
