@@ -134,12 +134,10 @@ BuildRequires:  golang(golang.zx2c4.com/wireguard/tun/tuntest)
 %prep
 %goprep
 rm -rf internal/tooldeps
+rm -rf cmd/mkpkg
 
 %build
-for cmd in cmd/* ; do
-  %gobuild -o %{gobuilddir}/bin/$(basename $cmd) %{goipath}/$cmd
-done
-for cmd in tstest/integration/vms tstest/integration tstest/integration/vms/gen wgengine/bench net/dnsfallback; do
+for cmd in cmd/tailscale cmd/tailscaled ; do
   %gobuild -o %{gobuilddir}/bin/$(basename $cmd) %{goipath}/$cmd
 done
 
