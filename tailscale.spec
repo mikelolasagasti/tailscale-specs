@@ -41,6 +41,7 @@ Source:         %{gosource}
 %goprep
 rm -rf internal/tooldeps
 rm -rf cmd/mkpkg
+rm -rf packages
 
 %generate_buildrequires
 %go_generate_buildrequires
