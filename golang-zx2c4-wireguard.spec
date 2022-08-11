@@ -45,7 +45,7 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 %if %{with check}
 %check
 rm format_test.go
-%gocheck
+%gocheck -d tun/netstack
 %endif
 
 %files
