@@ -13,7 +13,7 @@ Version:                0.0.20220316
 Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go.}
 
 %global golicenses      LICENSE
-%global godocs          README.md examples
+%global godocs          README.md
 
 Name:           %{goname}
 Release:        %autorelease
@@ -50,7 +50,7 @@ rm format_test.go
 
 %files
 %license LICENSE
-%doc README.md examples
+%doc README.md
 %{_bindir}/*
 
 %gopkgfiles
