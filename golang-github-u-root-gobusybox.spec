@@ -36,8 +36,8 @@ URL:            %{gourl}
 Source:         %{gosource}
 
 BuildRequires:  golang(github.com/google/goterm/term)
-BuildRequires:  golang(github.com/hugelgupf/p9/fsimpl/localfs)
-BuildRequires:  golang(github.com/hugelgupf/p9/p9)
+#BuildRequires:  golang(github.com/hugelgupf/p9/fsimpl/localfs)
+#BuildRequires:  golang(github.com/hugelgupf/p9/p9)
 %if %{without bootstrap}
 BuildRequires:  golang(github.com/u-root/u-root/pkg/strace)
 BuildRequires:  golang(github.com/u-root/u-root/pkg/ulog)
@@ -58,6 +58,8 @@ BuildRequires:  golang(golang.org/x/tools/imports)
 
 %prep
 %goprep
+# Avoid github.com/hugelgupf/p9
+rm -rf test/nested/nestedmod
 
 %install
 %gopkginstall
