@@ -45,6 +45,7 @@ Source1:        https://github.com/bazelbuild/rules_go/raw/master/go/tools/cover
 
 # Vendored
 # BuildRequires:  golang(github.com/bazelbuild/rules_go/go/tools/coverdata)
+BuildRequires:  golang(github.com/bits-and-blooms/bitset)
 BuildRequires:  golang(github.com/BurntSushi/toml)
 BuildRequires:  golang(github.com/cenkalti/backoff)
 BuildRequires:  golang(github.com/containerd/cgroups)
