@@ -61,15 +61,16 @@ BuildRequires:  golang(github.com/intel-go/cpuid)
 BuildRequires:  golang(github.com/kevinburke/ssh_config)
 BuildRequires:  golang(github.com/klauspost/pgzip)
 BuildRequires:  golang(github.com/kr/pty)
-BuildRequires:  golang(github.com/orangecms/go-framebuffer/framebuffer)
 BuildRequires:  golang(github.com/pborman/getopt/v2)
 BuildRequires:  golang(github.com/pierrec/lz4/v4)
 BuildRequires:  golang(github.com/rck/unit)
 BuildRequires:  golang(github.com/rekby/gpt)
 BuildRequires:  golang(github.com/safchain/ethtool)
 BuildRequires:  golang(github.com/spf13/pflag)
+%if %{without bootstrap}
 BuildRequires:  golang(github.com/u-root/gobusybox/src/pkg/bb)
 BuildRequires:  golang(github.com/u-root/gobusybox/src/pkg/golang)
+%endif
 BuildRequires:  golang(github.com/u-root/iscsinl)
 BuildRequires:  golang(github.com/ulikunitz/xz)
 BuildRequires:  golang(github.com/vishvananda/netlink)
@@ -97,7 +98,6 @@ BuildRequires:  golang(pack.ag/tftp)
 # Tests
 BuildRequires:  golang(github.com/creack/pty)
 BuildRequires:  golang(github.com/davecgh/go-spew/spew)
-BuildRequires:  golang(github.com/gojuno/minimock/v3)
 %endif
 
 %description
