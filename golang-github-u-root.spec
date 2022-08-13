@@ -10,13 +10,15 @@ Version:                0.9.0
 %gometa
 
 %global goipaths0       github.com/u-root/u-root
-%global goipathsex0     github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
+#%%global goipathsex0     github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
+%global goipathsex0     github.com/u-root/u-root/pkg/ulog
 
 %if %{without bootstrap}
-%global goipaths1       github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
+#%%global goipaths1       github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
+%global goipaths1       github.com/u-root/u-root/pkg/ulog
 %endif
 
-%global goaltipaths     github.com/u-root/u-root github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
+%global goaltipaths     github.com/u-root/u-root github.com/u-root/u-root/pkg/ulog
 
 %global common_description %{expand:
 A fully Go userland with Linux bootloaders! u-root can create a one-binary root

@@ -39,7 +39,7 @@ BuildRequires:  golang(github.com/google/goterm/term)
 #BuildRequires:  golang(github.com/hugelgupf/p9/fsimpl/localfs)
 #BuildRequires:  golang(github.com/hugelgupf/p9/p9)
 %if %{without bootstrap}
-BuildRequires:  golang(github.com/u-root/u-root/pkg/strace)
+#BuildRequires:  golang(github.com/u-root/u-root/pkg/strace)
 BuildRequires:  golang(github.com/u-root/u-root/pkg/ulog)
 %endif
 BuildRequires:  golang(github.com/u-root/uio/cp)
@@ -60,6 +60,7 @@ BuildRequires:  golang(golang.org/x/tools/imports)
 %goprep
 # Avoid github.com/hugelgupf/p9
 rm -rf test/nested/nestedmod
+rm -rf test/nested/cmd/strace
 
 %install
 %gopkginstall
