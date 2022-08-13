@@ -31,6 +31,7 @@ Source:         %{gosource}
 %prep
 %goprep
 rm -rf cmds
+rm -rf pkg/namespace pkg/fb
 
 %generate_buildrequires
 %go_generate_buildrequires
