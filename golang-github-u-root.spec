@@ -16,7 +16,7 @@ Version:                0.9.0
 %global goipaths1       github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
 %endif
 
-#%%global goaltipaths     github.com/u-root/u-root github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
+%global goaltipaths     github.com/u-root/u-root github.com/u-root/u-root/pkg/strace github.com/u-root/u-root/pkg/ulog
 
 %global common_description %{expand:
 A fully Go userland with Linux bootloaders! u-root can create a one-binary root
@@ -106,7 +106,6 @@ BuildRequires:  golang(github.com/davecgh/go-spew/spew)
 %goprep
 rm -rf cmds
 rm -rf pkg/namespace pkg/fb
-
 
 %install
 %gopkginstall
