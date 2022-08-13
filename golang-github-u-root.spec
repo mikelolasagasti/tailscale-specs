@@ -30,6 +30,7 @@ Source:         %{gosource}
 
 %prep
 %goprep
+rm -rf cmds
 
 %generate_buildrequires
 %go_generate_buildrequires
