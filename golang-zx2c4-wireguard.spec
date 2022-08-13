@@ -4,8 +4,7 @@
 # https://github.com/WireGuard/wireguard-go
 %global goipath         golang.zx2c4.com/wireguard
 %global forgeurl        https://github.com/WireGuard/wireguard-go
-Version:                0.0.20220316
-%global tag             0.0.20220316
+%global commit          c31a7b1ab47807f01613a571cc480f79d5fb4181
 
 %gometa
 
@@ -13,10 +12,11 @@ Version:                0.0.20220316
 Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go.}
 
 %global golicenses      LICENSE
-%global godocs          README.md
+%global godocs          README.md examples
 
 Name:           %{goname}
-Release:        %autorelease
+Version:        0
+Release:        %autorelease -p
 Summary:        Mirror only. Official repository is at https://git.zx2c4.com/wireguard-go
 
 License:        MIT
@@ -44,13 +44,12 @@ install -m 0755 -vp %{gobuilddir}/bin/* %{buildroot}%{_bindir}/
 
 %if %{with check}
 %check
-rm format_test.go
-%gocheck -d tun/netstack
+%gocheck
 %endif
 
 %files
 %license LICENSE
-%doc README.md
+%doc README.md examples
 %{_bindir}/*
 
 %gopkgfiles
