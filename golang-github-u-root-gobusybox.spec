@@ -17,7 +17,7 @@ Version:                0.1.0
 %global goipaths1       github.com/u-root/gobusybox/src/pkg/golang github.com/u-root/gobusybox/src/pkg/bb
 %endif
 
-%global goaltipaths     github.com/u-root/gobusybox github.com/u-root/gobusybox/src/pkg/golang github.com/u-root/gobusybox/src/pkg/bb
+#%%global goaltipaths     github.com/u-root/gobusybox github.com/u-root/gobusybox/src/pkg/golang github.com/u-root/gobusybox/src/pkg/bb
 
 
 %global common_description %{expand:
