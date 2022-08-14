@@ -22,6 +22,7 @@ Summary:        Mirror only. Official repository is at https://git.zx2c4.com/wir
 License:        MIT
 URL:            %{gourl}
 Source:         %{gosource}
+Patch1:         https://patch-diff.githubusercontent.com/raw/WireGuard/wireguard-go/pull/55.patch
 
 %description
 %{common_description}
